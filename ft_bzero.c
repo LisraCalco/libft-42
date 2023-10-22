@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:52:11 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:21 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/17 16:35:57 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/19 12:24:36 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *string)
+void	ft_bzero(void *s, unsigned int n)
 {
-	int	i;
+	char			*ptr;
+	unsigned int	i;
 
+	ptr = s;
 	i = 0;
-	while (string[i] != '\0')
+	while (i < n)
 	{
+		*ptr = 0;
+		ptr++;
 		i++;
 	}
-	return (i);
 }

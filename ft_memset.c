@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:52:11 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:21 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/17 16:36:07 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/19 12:34:07 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *string)
+void	*ft_memset(void *pointer, int value, unsigned int count)
 {
-	int	i;
+	char			*ptr;
+	unsigned int	i;
 
+	ptr = pointer;
 	i = 0;
-	while (string[i] != '\0')
+	while (i < count)
 	{
+		*ptr = value;
+		ptr++;
 		i++;
 	}
-	return (i);
+	return (pointer);
 }

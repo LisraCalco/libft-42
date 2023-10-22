@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:52:11 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:21 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/22 18:44:37 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/22 18:49:53 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *string)
-{
-	int	i;
+#include <stddef.h>
 
-	i = 0;
-	while (string[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+void *ft_memchr( const void * memoryBlock, int searchedChar, size_t size )
+{
+    char *memoryBlockCasted = (char *)memoryBlock;
+    while ( size-- )
+    {
+        if ( *memoryBlockCasted == (char)searchedChar )
+            return memoryBlockCasted;
+        ++memoryBlockCasted;
+    }
+    return NULL;
 }

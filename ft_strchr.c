@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:52:11 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:21 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/22 15:09:59 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/22 18:16:44 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *string)
+char	*ft_strchr(const char *string, int searchedChar)
 {
 	int	i;
 
 	i = 0;
 	while (string[i] != '\0')
 	{
+		if (string[i] == (char)searchedChar)
+			return ((char *)string + i);
 		i++;
 	}
-	return (i);
+	if (string[i] == (char)searchedChar)
+		return ((char *)string + i);
+	return (0);
 }

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:52:11 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:21 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/20 15:21:50 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/22 18:17:33 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *string)
+int	ft_toupper(int character)
 {
-	int	i;
-
-	i = 0;
-	while (string[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	if (character >= 'a' && character <= 'z')
+		return (character - 32);
+	return (character);
 }

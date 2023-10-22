@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 15:42:48 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/16 15:44:32 by tlegendr         ###   ########.fr       */
+/*   Created: 2023/10/19 15:04:47 by tlegendr          #+#    #+#             */
+/*   Updated: 2023/10/22 18:19:50 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int character)
+int	ft_isascii(int character)
 {
-    if (character >= 0 && character <= 127)
-        return 1;
-    return 0;
+	if (character >= 0 && character <= 127)
+		return (1);
+	return (0);
 }
