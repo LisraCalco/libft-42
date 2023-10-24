@@ -6,7 +6,7 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 18:08:06 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 19:27:00 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:17:01 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ void 	*ft_memchr( const void * memoryBlock, int searchedChar, size_t size );
 int 	ft_memcmp( const void * pointer1, const void * pointer2, size_t size );
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 int 	ft_atoi( const char * theString ); 
+void    *ft_calloc(size_t elementCount, size_t elementSize);
+char    *ft_strdup( const char * source );
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
 
 
 
