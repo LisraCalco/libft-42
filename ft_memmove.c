@@ -6,11 +6,11 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:52:14 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:19:19 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:29:06 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *destination, const void *source, size_t size)
 {

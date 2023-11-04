@@ -6,16 +6,15 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:07:16 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/11/03 17:33:13 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:28:35 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int count_num(int numin)
+int	count_num(int numin)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (numin == 0)
@@ -28,11 +27,11 @@ int count_num(int numin)
 	return (count);
 }
 
-char *ft_itoa(int numin)
+char	*ft_itoa(int numin)
 {
-	long tmp;
-	int len;
-	char *str;
+	long	tmp;
+	int		len;
+	char	*str;
 
 	tmp = numin;
 	if (tmp < 0)
@@ -40,7 +39,7 @@ char *ft_itoa(int numin)
 	len = count_num(numin);
 	if (numin < 0)
 		len++;
-	str = malloc(sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) *(len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
@@ -56,4 +55,3 @@ char *ft_itoa(int numin)
 		str[0] = '-';
 	return (str);
 }
-

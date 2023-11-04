@@ -6,11 +6,13 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:38:10 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/20 14:57:36 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:31:21 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy( void *destination, const void *source, unsigned int size )
+#include "libft.h"
+
+void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
 	char			*dst;
 	const char		*src;

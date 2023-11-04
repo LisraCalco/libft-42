@@ -6,11 +6,13 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:35:57 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/19 12:24:36 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:31:01 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	char			*ptr;
 	unsigned int	i;

@@ -6,9 +6,11 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 15:09:59 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:16:44 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:29:32 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *string, int searchedChar)
 {

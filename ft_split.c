@@ -6,13 +6,11 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:20:26 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/31 13:07:10 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:29:29 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_count_word(char const *s, char c)
 {
@@ -35,7 +33,22 @@ int	ft_count_word(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_free_tab(char **tab, int k)
+{
+	while (k-- > 0)
+		free(tab[k]);
+	free(tab);
+	return (NULL);
+}
+
+int	loop_string(char const *s, char c, int i)
+{
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+char	**ft_split(const char *s, char c)
 {
 	char	**tab;
 	int		i;
@@ -52,13 +65,14 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c)
 		{
 			start = i;
-			while (s[i] != c && s[i])
-				i++;
-			tab[k++] = ft_substr(s, start, i - start);
+			i = loop_string(s, c, i);
+			tab[k] = ft_substr(s + start, 0, i - start);
+			if (!tab[k++])
+				return (ft_free_tab(tab, k));
 		}
 		else
 			i++;
 	}
-	tab[k] = 0;
+	tab[k] = NULL;
 	return (tab);
 }

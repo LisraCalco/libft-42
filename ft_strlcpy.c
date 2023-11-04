@@ -6,11 +6,11 @@
 /*   By: tlegendr <tlegendr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:42:00 by tlegendr          #+#    #+#             */
-/*   Updated: 2023/10/22 18:19:40 by tlegendr         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:29:50 by tlegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
